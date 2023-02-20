@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+    <head>
+        <title>ADWENT.agency</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <style>
+            button {
+  margin: 0 auto;
+  display: block;
+}
+            .rating-area {
+            overflow: hidden;
+            width: 480px;
+            margin: 0 auto;
+            }
+            .rating-area:not(:checked) > input {
+                display: none;
+            }
+            .rating-area:not(:checked) > label {
+                float: right;
+                width: 42px;
+                padding-right: 10%;
+                cursor: pointer;
+                font-size: 45px;
+                line-height: 40px;
+                color: lightgrey;
+                text-shadow: 1px 1px #bbb;
+                
+            }
+            .rating-area:not(:checked) > label:before {
+                content: '★';
+            }
+            .rating-area > input:checked ~ label {
+                color: gold;
+                text-shadow: 1px 1px #c60;
+            }
+            .rating-area:not(:checked) > label:hover,
+            .rating-area:not(:checked) > label:hover ~ label {
+                color: gold;
+            }
+            .rating-area > input:checked + label:hover,
+            .rating-area > input:checked + label:hover ~ label,
+            .rating-area > input:checked ~ label:hover,
+            .rating-area > input:checked ~ label:hover ~ label,
+            .rating-area > label:hover ~ input:checked ~ label {
+                color: gold;
+                text-shadow: 1px 1px goldenrod;
+            }
+            .rate-area > label:active {
+                position: relative;
+            }
+    
+            .rating-result{
+                color: grey;
+            }
+            #speed-container {
+                position: fixed;
+                right: 2em;
+                bottom: 0;
+            }
+            .show-more-button-container,.rating-result-container{
+                text-align: center;
+            }
+            h1, h2, #start {
+                color: white;
+            }
+            .lil-image-container,.more-lil-image-container {
+                background: #737373;
+                float: left;
+                position: relative;
+                width: 30%;
+                padding-bottom: 30%;
+                margin: 1.66%;        
+            }
+            .lil-image-container:hover,.more-lil-image-container:hover {
+                background: black;
+            }
+            .lil-image,.more-lil-image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            } 
+            input[type="submit"]{
+    
+            color: white;
+            background-color: blue;
+            border:2px solid black;
+            border-radius: 2px;
+        }
+        </style>
+    </head>
+    <body>
+        
+        <header class="row">
+            <nav class="blue darken-1">
+                <div class="nav-wrapper">
+                    <div class="col s12">
+                        <a href="#" class="brand-logo">Star sky for ADWENT</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="container">
+            <main>
+                <!-- <section> -->
+                    <h1 class="center-align">Astronomy Picture Of the Day</h1>
+                    <div class="row">
+                        <div class="col s12 m8 offset-m2">
+                            <div id="apod" class="card"></div>
+                        </div>
+                    </div>
+                    <div id="lil-pictures-container">
+                        <!--тут будут маленькие изображения -->
+                    </div>
+                    <div class="show-more-button-container">
+                        <a  id="show-more-button" class="btn-floating btn-large cyan pulse"><i class="material-icons">arrow_downward</i></a>
+                    </div>
+
+                    <div id="more-lil-pictures-container"></div>
+             </main>
+        </div> 
+    
+
+        <div id="speed-container" class="range-field">
+
+            <input value="20" type="range" id="speed-slider" step="1" min="0" max="100" />
+        </div>
+        <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="main.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+        <script src="starfield.js"></script>
+    </body>
+</html>
