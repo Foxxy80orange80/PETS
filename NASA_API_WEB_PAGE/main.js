@@ -212,32 +212,3 @@ document.addEventListener('DOMContentLoaded', function(event) {
 //добавление основной картинки и 6 превью
 window.addEventListener("DOMContentLoaded", contentLoaded)
 
-// попытка вытащить данные из формы
-
-
-
-        // let serverResponse = document.querySelector("#response")
-        //     // document.querySelector('#inpform').addEventListener('submit', function(e){
-        // var form = document.querySelector['#inpform']
-        // console.log(form)
-        // form.onsubmit=function(e){
-        //     e.preventDefault()
-        
-        //     let rating=document.forms.myForm.rating.value
-        //     console.log(rating)
-        
-        //     let req= new XMLHttpRequest()
-        
-        //     req.open("POST","backend.php")
-        //     req.setRequestHeader("Content-Type","text-plain")
-        
-        //     req.onreadystatechange=function(){
-        //         if(req.readyState===4 && req.status===200){
-        //             serverResponse.textContent=xhr.responseText
-        //         }
-        //     }
-        
-        //     req.send('rating='+ rating+ '&date='+ main_img_date)
-        
-        // }
-        // // )
